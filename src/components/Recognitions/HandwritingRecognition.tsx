@@ -56,14 +56,14 @@ const HandwritingRecognition = () => {
 					<Button onClick={() => HWCanvas && HWCanvas.handle.redo()}>Redo</Button>
 				</div>
 
-				<div className='canvas-render flex items-center justify-center p-8 m-6' />
+				<div className='canvas-render flex flex-wrap items-center justify-center p-8 m-6' />
 			</div>
 
 			<div ref={resultRef} className='w-full sm:h-full'>
-				<div className='font-bold text-[4.5rem] text-center pt-4'>Result</div>
+				<div className='font-bold text-[3.5rem] sm:text-[4.5rem] text-center pt-4'>Result</div>
 				<div className='w-full sm:w-[60%] max-h-[30rem] sm:max-h-[44rem] sm:h-full mt-12 mx-auto border-t-[4px] border-b-[4px] flex flex-wrap justify-center items-start overflow-x-hidden overflow-y-auto'>
 					{result.map((_, idx) => (
-						<p key={_} className='text-center text-[4rem] m-4'>
+						<p key={_} className='text-center sm:text-[3.6rem] m-4'>
 							{_} {idx != result.length - 1 ? ',' : ''}
 						</p>
 					))}

@@ -40,8 +40,6 @@ const PureDocumentRecognition = () => {
 			: imagePath;
 		Tesseract.recognize(dataUrl, 'eng', {
 			logger: (m) => {
-				// console.log(m);
-
 				setProgress({
 					value: m.progress,
 					status: m.status,
@@ -106,12 +104,10 @@ const PureDocumentRecognition = () => {
 
 				{!!progress.status && !text && (
 					<div className='w-full max-w-[50rem] p-6'>
-						<div className='relative w-full h-[4rem] top-0 left-0 bg-slate-800 rounded-[1.5rem]'>
+						<div className='relative w-full h-[4rem] top-0 left-0 bg-slate-800 rounded-[1.5rem] overflow-hidden'>
 							<div
 								className='h-full rounded-[1.5rem] bg-teal-600 transition-all'
-								style={{
-									width: `calc(100%*${+progress.value})`,
-								}}
+								style={{ width: `calc(100%*${+progress.value})` }}
 							/>
 						</div>
 						<div className='text-[2.4rem] text-center capitalize p-2'>{progress.status}</div>
@@ -121,7 +117,7 @@ const PureDocumentRecognition = () => {
 
 			{!!text && (
 				<div className='w-full flex flex-col items-center justify-start mb-12'>
-					<div className='font-bold text-center text-[4rem] p-4'>Result</div>
+					<div className='font-bold text-center sm:text-[4rem] p-4'>Result</div>
 					<div className='p-6 text-[2.2rem]'>{text}</div>
 				</div>
 			)}

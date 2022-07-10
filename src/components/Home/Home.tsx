@@ -5,13 +5,13 @@ import { methods } from '../shared';
 const Home = () => {
 	return (
 		<div className='w-full p-8'>
-			<div className='w-full sm:w-[70%] p-8 mx-auto my-6 font-bold text-[5.5rem] text-center text-indigo-800'>
+			<div className='w-full sm:w-[70%] p-8 mx-auto my-6 font-bold text-[3.5rem] sm:text-[5.5rem] text-center text-indigo-800'>
 				Welcome to OCR Demo
 			</div>
 			<div className='w-full sm:w-[70%] p-8 mx-auto my-6'>
 				<div className='pb-8'>
-					<div className='font-semibold text-[3.6rem] text-center'>Method</div>
-					<ul className='flex items-center justify-center'>
+					<div className='font-semibold sm:text-[3.6rem] text-center'>Method</div>
+					<ul className='flex flex-wrap items-center justify-center'>
 						{methods.map(({ name, slug }) => (
 							<li key={slug} className='m-4'>
 								<Link className='p-6 text-[2.4rem] hover:underline underline-offset-8' to={`/${slug}`}>
@@ -23,8 +23,8 @@ const Home = () => {
 				</div>
 
 				<div>
-					<div className='font-semibold text-[3.6rem] text-center'>More info:</div>
-					<ul>
+					<div className='font-semibold sm:text-[3.6rem] text-center'>More info:</div>
+					<ul className='list-disc list-inside'>
 						<li className='text-center m-4'>
 							<a
 								className='p-6 text-[2.4rem] hover:underline underline-offset-8'
