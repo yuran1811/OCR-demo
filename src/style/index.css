@@ -1,1 +1,0 @@
-@tailwind base;@tailwind components;@tailwind utilities;@layer base{*,*::before,*::after{@apply text-[2rem]}*::-webkit-scrollbar,*::-webkit-scrollbar-thumb{@apply w-0 h-0}html{@apply !text-[62.5%]}body{@apply overflow-x-hidden}canvas{@apply cursor-crosshair border-[2px] border-black}input[type='file']::-webkit-file-upload-button{display:none}}
